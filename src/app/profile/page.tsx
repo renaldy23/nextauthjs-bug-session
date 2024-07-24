@@ -8,8 +8,6 @@ async function getProfileData() {
 }
 
 export default async function Page() {
-  const session = await auth();
-  console.log("current authenticated in server component: ", session?.user);
   const data = await getProfileData();
   return <h1>Profile Page</h1>;
 }
